@@ -1,0 +1,25 @@
+$keyword-font-weight: 600;
+
+.b-panel {
+    border: 1px solid $gray-lighter;
+
+    &__heading {
+        padding: $padding-xl-vertical $padding-large-horizontal;
+        border-bottom: inherit;
+        background-color: $gray-the-lightest;
+    }
+
+    &__body {
+        padding: $padding-xl-vertical $padding-large-horizontal;
+        background-color: $white;
+    }
+
+    &__text {
+        padding: $padding-large-vertical 0;
+
+        &--keyword {
+            font: inherit;
+            font-weight: $keyword-font-weight;
+        }
+    }
+}

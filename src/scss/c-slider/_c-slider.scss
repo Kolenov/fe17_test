@@ -1,0 +1,63 @@
+%shadow {
+    content: "";
+    position: absolute;
+    right: 4px;
+    left: 4px;
+    z-index: -1;
+    display: block;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.c-slider {
+    @include perspective(1000px);
+
+    &__picture {
+        position: relative;
+
+        &::after {
+            @extend %border-box;
+            @extend %shadow;
+            @include rotateX(-15deg);
+            top: 4px;
+            bottom: 50%;
+        }
+
+        &::before {
+            @extend %border-box;
+            @extend %shadow;
+            @include rotateX(15deg);
+            top: 50%;
+            bottom: 0;
+        }
+    }
+
+    &__photo {
+        max-height: 250px;
+    }
+
+    &__pagination {
+        @extend %border-box;
+        margin-top: 20px;
+    }
+
+    &__control {
+        position: absolute;
+        padding: 7px 15px;
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        color: $white;
+        background-color: $gray-dark;
+        text-transform: lowercase;
+
+        &--prev {
+            left: 5px;
+        }
+
+        &--next {
+            right: 5px;
+        }
+    }
+}

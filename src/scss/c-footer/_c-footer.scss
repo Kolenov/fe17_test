@@ -1,0 +1,70 @@
+%social-icon-common {
+    display: inherit;
+    margin-right: ($grid-gutter-width / 2);
+}
+
+.c-footer {
+    padding-top: ($line-height-computed * 2);
+    color: $white;
+
+    &__headline2 {
+        color: inherit;
+    }
+
+    &__social {
+        display: inline-block;
+
+        &--facebook {
+            @extend %social-icon-common;
+            @include sprite($social-facebook);
+            &:hover {
+                @include sprite($social-facebook-hover);
+            }
+        }
+
+        &--twitter {
+            @extend %social-icon-common;
+            @include sprite($social-twitter);
+            &:hover {
+                @include sprite($social-twitter-hover);
+            }
+        }
+
+        &--flickr {
+            @extend %social-icon-common;
+            @include sprite($social-flickr);
+            &:hover {
+                @include sprite($social-flickr-hover);
+            }
+        }
+
+        &--dig {
+            @extend %social-icon-common;
+            @include sprite($social-dig);
+            &:hover {
+                @include sprite($social-dig-hover);
+            }
+        }
+
+        &--blogger {
+            @extend %social-icon-common;
+            @include sprite($social-blogger);
+            &:hover {
+                @include sprite($social-blogger-hover);
+            }
+        }
+    }
+
+    &__text {
+        margin: $line-height-computed 0;
+        font: inherit;
+
+        &--brand {
+            color: $brand-primary;
+        }
+
+        &--nobr {
+            white-space: nowrap;
+        }
+    }
+}

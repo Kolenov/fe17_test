@@ -1,0 +1,145 @@
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:         #0e0e0e;
+$gray-darker:       #1c1c1c;
+$gray-dark:         #444;
+$gray:              #555;
+$gray-light:        #767676;
+$gray-lighter:      #ccc;
+$gray-the-lightest: #efefef;
+$white: #fff;
+
+$brand-primary:     #b42924;
+$brand-success:     #5cb85c;
+$brand-info:        $gray-light;
+$brand-warning:     #c3b091;
+$brand-danger:      #844;
+
+
+//== Grid system
+//
+
+//** Number of columns in the grid.
+$grid-columns: 12;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 20px;
+
+//== Container sizes
+//
+
+// Medium screen desktop
+$container-desktop: 820px + $grid-gutter-width;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+////** Background color for `<body>`.
+$body-bg: $white;
+////** Global text color on `<body>`.
+$text-color: $gray-dark;
+//
+////** Global textual link color.
+$link-color: $brand-primary;
+////** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%);
+//** Link hover decoration.
+$link-hover-decoration: underline;
+////** Link color inverse.
+$link-color-inverse: $white;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$bootstrap-sass-asset-helper: false;
+//== Iconography
+//
+//** Load fonts from this directory.
+
+$icon-font-path: "../fonts/bootstrap/";
+
+//** File name for all font files.
+$icon-font-name: "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+$icon-font-svg-id: "glyphicons_halflingsregular";
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+
+$padding-xl-vertical: 12px;
+$padding-xl-horizontal: 20px;
+
+$padding-large-vertical: 10px;
+$padding-large-horizontal: 16px;
+
+$padding-small-vertical: 5px;
+$padding-small-horizontal: 10px;
+
+$padding-xs-vertical: 1px;
+$padding-xs-horizontal: 5px;
+
+$line-height-large: 1.3333333; // extra decimals for Win 8.1 Chrome
+$line-height-small: 1.5;
+
+$border-radius-base: 4px;
+$border-radius-large: 6px;
+$border-radius-small: 3px;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color: $white;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg: $brand-primary;
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+$nav-link-padding: 10px 15px;
+
+//== Pills
+$nav-pills-border-radius: $border-radius-large;
+$nav-pills-active-link-hover-bg: $component-active-bg;
+$nav-pills-active-link-hover-color: $component-active-color;
+

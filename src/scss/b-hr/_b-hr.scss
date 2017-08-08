@@ -1,0 +1,11 @@
+.b-hr {
+    &--dotted {
+        margin: 4px 0;
+        border-top: 1px dotted $gray-lighter;
+    }
+
+    &--solid {
+        margin: 4px 0;
+        border-top: 1px solid $gray-lighter;
+    }
+}

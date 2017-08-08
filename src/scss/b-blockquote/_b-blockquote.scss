@@ -1,0 +1,49 @@
+$quote-font-size: ceil($font-size-base * 2.55); //36px
+$quote-line-height: 1;
+
+%quote {
+  position: absolute;
+  display: block;
+
+  font: inherit;
+  font-size: $quote-font-size;
+  line-height: 1;
+}
+
+.b-blockquote {
+  position: relative;
+  quotes: "\201c" "\201d" "\2018" "\2019";
+  color: $gray-light;
+
+  &__text {
+    padding-left: $grid-gutter-width;
+
+    font-style: italic;
+    text-align: justify;
+  }
+
+  &__sign {
+    padding-left: $grid-gutter-width;
+    font-style: normal;
+
+    &--brand {
+      color: $brand-primary;
+    }
+  }
+
+  &::before {
+    @extend %quote;
+    content: open-quote;
+
+    top: -0.1rem;
+    left: 0;
+  }
+
+  &::after {
+    @extend %quote;
+    content: close-quote;
+
+    right: 0;
+    bottom: -1rem;
+  }
+}

@@ -1,0 +1,29 @@
+.b-table {
+    @extend %border-box;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    background-color: transparent;
+
+    &__row {
+        @extend %border-box;
+    }
+
+    &__cell {
+        @extend %border-box;
+        vertical-align: inherit;
+    }
+
+    &__cell-position_r {
+        text-align: right;
+    }
+
+    &__gap {
+        @extend %border-box;
+    }
+
+    &__inner {
+        @extend %border-box;
+    }
+}

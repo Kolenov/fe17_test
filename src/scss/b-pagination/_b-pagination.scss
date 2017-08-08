@@ -1,0 +1,21 @@
+.b-pagination {
+  text-align: center;
+
+  &__item {
+    @include square(12px);
+    display: inline-block;
+    margin: 0 2px;
+
+    &--bullet {
+      @extend %border-box;
+      border: solid 1px $gray-lighter;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, $gray-lighter, $white);
+      box-shadow: inset 0 3px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &--active {
+      background: $gray-light;
+    }
+  }
+}

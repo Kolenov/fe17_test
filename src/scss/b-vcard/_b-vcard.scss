@@ -1,0 +1,54 @@
+.b-vcard {
+    padding-left: $padding-xl-horizontal;
+
+    &__item {
+        position: relative;
+        width: 100%;
+        margin-bottom: $line-height-computed;
+
+        &--adr {
+            &::before {
+                content: "";
+                position: absolute;
+
+                top: 3px;
+                left: - $line-height-computed;
+
+                display: block;
+                @include sprite($glyphicons-envelope);
+            }
+        }
+
+        &--email {
+            &::before {
+                content: "";
+                position: absolute;
+
+                top: 3px;
+                left: -$line-height-computed;
+
+                display: block;
+                @include sprite($glyphicons-pencil);
+            }
+        }
+
+        &--tel {
+            &::before {
+                content: "";
+                position: absolute;
+
+                top: 3px;
+                left: -$line-height-computed;
+
+                display: block;
+                @include sprite($glyphicons-chat);
+            }
+        }
+
+        &--tel-num {
+            border-bottom: 0;
+            cursor: inherit;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+$logo-box-shadow-color: rgba(98, 8, 12, 0.3);
+$logo-box-shadow-inset-color: rgba(255, 255, 255, 0.75);
+$navbar-height: 81px;
+
+.c-navbar {
+    @include sprite($header);
+    height: $navbar-height;
+
+
+    &__inner {
+        @extend %border-box;
+        @include container-fixed($grid-gutter-width);
+        width: $container-desktop;
+    }
+
+    &__logo {
+        @include sprite($logo);
+        display: inline-block;
+        float: left;
+        margin-right: 70px;
+        box-shadow: 0 0 5px $logo-box-shadow-color, inset 0 0 3px $logo-box-shadow-inset-color;
+    }
+
+    &__menu {
+        display: flex;
+        color: $link-color-inverse;
+
+        font-size: $font-size-large;
+        font-family: $font-family-serif;
+        line-height: $navbar-height;
+
+        justify-content: space-between;
+    }
+
+    &__link {
+        position: relative;
+        top: -4px;
+        padding-bottom: 4px;
+
+        &:hover {
+            border-bottom: 3px solid $link-color-inverse;
+            text-decoration: none;
+        }
+    }
+}

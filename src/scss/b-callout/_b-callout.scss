@@ -1,0 +1,20 @@
+.b-callout {
+  @include box-sizing(border-box);
+  padding: 10px $grid-gutter-width;
+
+  border: solid 1px $gray-lighter;
+  border-left: 6px solid $gray-base;
+  background-color: $white;
+
+  &--danger {
+    border-left: 6px solid $brand-danger;
+  }
+
+  &--info {
+    border-left: 6px solid $brand-info;
+  }
+
+  &--warning {
+    border-left: 6px solid $brand-warning;
+  }
+}

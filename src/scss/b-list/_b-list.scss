@@ -1,0 +1,20 @@
+.b-list {
+  color: $gray-light;
+  list-style: decimal inside;
+
+  &__item {
+    width: 100%;
+    padding: $padding-xs-vertical 0;
+
+    &--bulleted {
+      list-style: none;
+
+      &::before {
+        @extend %glyphicon;
+        content: "\e250";
+        padding-right: .5em;
+        font-size: .7em;
+      }
+    }
+  }
+}

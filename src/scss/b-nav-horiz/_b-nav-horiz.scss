@@ -1,0 +1,12 @@
+.b-nav-horiz {
+  display: flex;
+  list-style: none;
+
+  &__item {
+       font: inherit;
+     }
+
+  &__link {
+    line-height: 1;
+  }
+}

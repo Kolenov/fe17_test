@@ -1,0 +1,44 @@
+.b-control {
+    vertical-align: top;
+
+    &__label {
+        font: inherit;
+        font-weight: 600;
+        font-size: $font-size-large;
+    }
+
+    &__input {
+        @extend %border-box;
+        width: 100%;
+        margin-bottom: $line-height-computed;
+        padding: $padding-xs-vertical $padding-xs-horizontal;
+        border: solid 1px $gray-lighter;
+        border-radius: $border-radius-small;
+        font: inherit;
+        font-size: $font-size-large;
+
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.4);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(0,0,0,.4);
+        }
+
+        &--noresize {
+            resize: none;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        margin-left: 20px;
+        padding: 6px 12px;
+        border: 1px solid $gray-base;
+        border-radius: $border-radius-small;
+        white-space: nowrap;
+        background-color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        user-select: none;
+        vertical-align: middle;
+    }
+}

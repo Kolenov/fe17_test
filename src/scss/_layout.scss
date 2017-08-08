@@ -1,0 +1,75 @@
+%transparent {
+    background-color: transparent;
+}
+
+
+.l-page {
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    background-image: url("../img/page-background.png");
+    &__header {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    &__container {
+        @extend %border-box;
+        @include container-fixed($grid-gutter-width);
+        width: $container-desktop;
+
+    }
+
+    &__article {
+        padding-top: ($line-height-computed * 6);
+
+    }
+
+    &__footer {
+        height: 340px;
+        margin-top: ($line-height-computed * 6);
+        background-color: $gray-base;
+    }
+
+    &__col-3 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(3);
+    }
+
+    &__col-4 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(4);
+    }
+
+    &__col-5 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(5);
+    }
+
+    &__col-6 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(6);
+    }
+
+    &__col-7 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(7);
+    }
+
+    &__col-8 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(8);
+    }
+
+    &__col-12 {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(12);
+    }
+}

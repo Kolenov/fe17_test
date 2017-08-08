@@ -1,0 +1,144 @@
+$blockquote-margin-bottom: $line-height-computed;
+
+%hr-line {
+    @extend %border-box;
+    content: "";
+    display: block;
+
+    width: inherit;
+    height: 10px;
+
+}
+
+%h1-h3-margins {
+    margin-top: $line-height-computed;
+    margin-bottom: ($line-height-computed / 2);
+}
+
+%h4-h6-margins {
+    margin-top: ($line-height-computed / 2);
+    margin-bottom: ($line-height-computed / 2);
+}
+
+.c-article {
+    padding-top: $line-height-computed;
+
+    &::after {
+        @extend %hr-line;
+        margin-top: $line-height-computed;
+
+        border-top: 1px solid $gray-base;
+        border-bottom: 6px solid $gray-base;
+    }
+
+
+
+    &__headline1 {
+        @extend %h1-h3-margins;
+        margin-bottom: $line-height-computed;
+
+        &::after {
+            @extend %hr-line;
+            margin-top: $line-height-computed;
+
+            border-top: 6px solid $gray-base;
+            border-bottom: 1px solid $gray-base;
+        }
+    }
+
+    &__headline2 {
+        @extend %h1-h3-margins;
+    }
+
+    &__headline3 {
+        @extend %h1-h3-margins;
+    }
+
+    &__headline4 {
+        @extend %h4-h6-margins;
+    }
+
+    &__headline5 {
+        @extend %h4-h6-margins;
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    &__headline-inner {
+        vertical-align: text-top;
+        margin-right: 0.7em;
+
+        &--holder {
+            @include sprite($holder);
+            display: inline-block;
+        }
+
+        &--brush {
+            @include sprite($brush);
+            display: inline-block;
+        }
+
+        &--person {
+            @include sprite($person);
+            display: inline-block;
+        }
+    }
+
+    &__headline-inner-text {
+        color: $brand-primary;
+    }
+
+    &__text {
+        margin-bottom: ($line-height-computed / 2);
+        font: inherit;
+
+        &--dropcaps2:first-letter {
+            @include drop-caps(2);
+        }
+    }
+
+    &__inner-container {
+        @include container-fixed();
+    }
+
+    &__row {
+        @include make-row();
+    }
+
+    &__row--half-gutter {
+        @include make-row($grid-gutter-width / 2);
+    }
+
+
+    &__col-4--half-gutter {
+        @extend %border-box;
+        @extend %transparent;
+        @include make-md-column(4, $grid-gutter-width / 2);
+    }
+
+    &__slider {
+        margin-bottom: ($line-height-computed / 4);
+    }
+
+    &__picture {
+        margin: ($line-height-computed / 2) 0;
+
+        &--half-gutter {
+            margin: ($grid-gutter-width / 4) 0;
+        }
+    }
+
+    &__list {
+        margin: $grid-gutter-width 0;
+    }
+
+    &__blockquote {
+        margin-bottom: $blockquote-margin-bottom;
+    }
+
+    &__headline-position-top {
+        margin-top: 0;
+        line-height: 1;
+    }
+
+
+}

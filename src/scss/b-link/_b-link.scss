@@ -1,0 +1,32 @@
+.b-link {
+  color: $link-color;
+  background-color: transparent;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+
+  &:active {
+    color: $link-color;
+  }
+
+  &__inner {
+    vertical-align: middle;
+  }
+
+  &--diasabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--inverse {
+    color: $link-color-inverse;
+  }
+
+  &--inverse:hover {
+    color: $link-color-inverse;
+    text-decoration: $link-hover-decoration;
+  }
+}
